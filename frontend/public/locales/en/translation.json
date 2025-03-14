@@ -1,0 +1,43 @@
+{
+    "home":{
+        "title": "Home",
+        "description": "This is the homepage."
+    },
+    "list":{
+        "parts": "Parts",
+        "pcs": "PCs",
+        "add": "Add new part",
+        "addPc": "Add new PC",
+        "filter": "Filter",
+        "filters": "Filters",
+        "priceRange": "Price range"
+    },
+    "error": {
+        "error": "Error",
+        "notFound": "Page not found",
+        "redirecting" : "redirecting to home page..."
+    },
+    "form": {
+        "create": "Create",
+        "update": "Update",
+        "delete": "Delete",
+        "name": "Name",
+        "producer": "Producer",
+        "type": "Type",
+        "price": "Price",
+        "weight": "Weight",
+        "validation":{
+            "name": "Name is required",
+            "producer": "Producer is required",
+            "type":"Type is required",
+            "price": "Price is required",
+            "weight": "Weight is required"
+        },
+        "success": "Success!",
+        "error": {
+            "invalid": "Error: invalid data",
+            "notFound": "Part not found"
+        }
+    },
+    "loading": "Loading page..."
+}

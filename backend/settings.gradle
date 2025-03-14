@@ -1,0 +1,5 @@
+rootProject.name = 'kzim2149'
+include 'kzim2149-backend'
+include 'kzim2149-desktop'
+include 'kzim2149-web'
+include 'kzim2149-spring'

@@ -1,0 +1,12 @@
+subprojects {
+    apply plugin: 'java'
+    apply from: "$rootDir/lint.gradle"
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.16.0-rc1'
+    }
+}

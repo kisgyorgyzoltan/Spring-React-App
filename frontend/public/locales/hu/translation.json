@@ -1,0 +1,43 @@
+{
+    "home":{
+        "title": "Főoldal",
+        "description": "Ez a főoldal."
+    },
+    "list":{
+        "parts": "Alkatrészek",
+        "pcs": "Gépek",
+        "add": "Új alkatrész hozzáadása",
+        "addPc": "Új gép hozzáadása",
+        "filter": "Szűrés",
+        "filters": "Szűrők",
+        "priceRange": "Ár tartomány"
+    },
+    "error": {
+        "error": "Hiba",
+        "notfound": "Az oldal nem található.",
+        "redirecting": "átirányítás a főoldalra..."
+    },
+    "form": {
+        "create": "Létrehozás",
+        "update": "Módosítás",
+        "delete": "Törlés",
+        "name": "Név",
+        "producer": "Gyártó",
+        "type": "Típus",
+        "price": "Ár",
+        "weight": "Súly",
+        "validation":{
+            "name": "A név megadása kötelező",
+            "producer": "A gyártó megadása kötelező",
+            "type":"A típus megadása kötelező",
+            "price": "Az ár megadása kötelező",
+            "weight": "A súly megadása kötelező"
+        },
+        "success": "Siker!",
+        "error": {
+            "invalid": "Hibás adatok",
+            "notFound": "Az alkatrész nem található."
+        }
+    },
+    "loading": "Oldal betöltése..."
+}

@@ -1,0 +1,29 @@
+plugins {
+    id 'application'
+    id 'maven-publish'
+}
+
+dependencies {
+    implementation project(path: ':kzim2149-backend')
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.7'
+    runtimeOnly group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.11'
+}
+
+application {
+    mainClass = 'edu.bbte.idde.kzim2149.App'
+}
+
+run {
+    standardInput = System.in
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'edu.bbte.idde.kzim2149'
+            artifactId = 'kzim2149-desktop'
+            version = '1.0‐SNAPSHOT'
+            from components.java
+        }
+    }
+}

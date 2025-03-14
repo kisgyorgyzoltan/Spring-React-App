@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'edu.bbte.idde.kzim2149'
+version 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.28'
+    runtimeOnly group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.0.0'
+    implementation project(path: ':kzim2149-backend')
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+}
+
+def deploymentName = 'ROOT'
+
+def tomcatHome = System.getenv('CATALINA_HOME')
+logger.quiet("Tomcat home detected as '${tomcatHome}'")
+
+
+task deploy(type: Copy, dependsOn: 'war') {
+
+    doFirst {
+        if (!tomcatHome) {
+            throw new InvalidUserDataException("Tomcat home (CATALINA_HOME) not set")
+        }
+    }
+
+    from war.archiveFile
+
+    rename war.archiveFileName.get(), "${deploymentName}.war"
+
+    into "${tomcatHome}/webapps"
+}
+
+
+task undeploy(type: Delete) {
+    doFirst {
+        if (!tomcatHome) {
+            throw new InvalidUserDataException("Tomcat home (CATALINA_HOME) not set")
+        }
+    }
+
+    delete "${tomcatHome}/webapps/${deploymentName}.war"
+}

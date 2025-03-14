@@ -1,0 +1,15 @@
+stages:
+  - check
+
+check:
+  stage: check
+  image: node:18.18.0-alpine
+  script:
+    - npm install
+    - npx eslint .
+    - npx tsc
+  cache:
+    key: "$CI_JOB_NAME"
+    paths:
+      - "node_modules/"
+      - "**/node_modules"

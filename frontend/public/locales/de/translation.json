@@ -1,0 +1,43 @@
+{
+    "home":{
+        "title": "Startseite",
+        "description": "Willkommen auf der Startseite"
+    },
+    "list":{
+        "parts": "PC-Teile",
+        "pcs": "PCs",
+        "add": "Neues Teil hinzufügen",
+        "addPc": "Neuen PC hinzufügen",
+        "filter": "Filtern",
+        "filters": "Filter",
+        "priceRange": "Preisbereich"
+    },
+    "error": {
+        "error": "Fehler",
+        "notFound": "Seite nicht gefunden",
+        "redirecting": "Weiterleitung..."
+    },
+    "form": {
+        "create": "Erstellen",
+        "update": "Aktualisieren",
+        "delete": "Löschen",
+        "name": "Name",
+        "producer": "Produzent",
+        "type": "Typ",
+        "price": "Preis",
+        "weight": "Gewicht",
+        "validation":{
+            "name": "Name ist erforderlich",
+            "producer": "Produzent ist erforderlich",
+            "type":"Typ ist erforderlich",
+            "price": "Preis ist erforderlich",
+            "weight": "Gewicht ist erforderlich"
+        },
+        "success": "Erfolgreich",
+        "error": {
+            "invalid": "Ungültige Daten",
+            "notFound": "Teil nicht gefunden"
+        }
+    },
+    "loading": "Lade..."
+}

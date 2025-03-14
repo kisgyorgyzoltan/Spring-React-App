@@ -1,0 +1,10 @@
+node_modules/
+build/
+dist/
+coverage/
+docs/
+jsdoc/
+tmp/
+test.js
+.idea/
+.vscode/
